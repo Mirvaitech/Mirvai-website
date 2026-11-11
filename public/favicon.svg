@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="mirvaiGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#deb26d" />
+      <stop offset="60%" stop-color="#cca462" />
+      <stop offset="100%" stop-color="#b88f4e" />
+    </linearGradient>
+    <filter id="subtleShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="1" stdDeviation="0.8" flood-color="#000000" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Mirvai Solid Gold Square Badge with slightly rounded corners matching brand identity -->
+  <rect width="64" height="64" rx="8" fill="url(#mirvaiGoldGrad)" />
+
+  <!-- Subtle Inner Border Highlight -->
+  <rect x="2" y="2" width="60" height="60" rx="6.5" fill="none" stroke="#fae7be" stroke-width="1.2" opacity="0.6" />
+
+  <!-- Crisp Regal Serif 'M' in Dark Emerald Green #082216 -->
+  <!-- Rendered with pure vector paths + high-fidelity serif font fallbacks -->
+  <g filter="url(#subtleShadow)">
+    <text
+      x="32"
+      y="47"
+      font-family="'Playfair Display', 'Cinzel', 'Times New Roman', 'Georgia', serif"
+      font-size="43"
+      font-weight="800"
+      fill="#082216"
+      text-anchor="middle"
+      letter-spacing="-0.5"
+    >M</text>
+  </g>
+</svg>
