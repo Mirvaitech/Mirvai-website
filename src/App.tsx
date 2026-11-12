@@ -852,24 +852,26 @@ export default function App() {
               3. Then the subtext
               4. Finally fade in the "Explore homes" button
           */}
-          <TypewriterHero
-            subtext={cms.heroCopy}
-            onExploreClick={() => jumpTo('properties')}
-          />
-
-          <figure className="hero-photo">
-            <img
-              src="/assets/courtyard.webp"
-              alt="A quiet limestone courtyard with a timber entry, leafy tree and reflecting pool"
-              width={1360}
-              height={680}
-              fetchPriority="high"
+          <div className="hero-layout">
+            <TypewriterHero
+              subtext={cms.heroCopy}
+              onExploreClick={() => jumpTo('properties')}
             />
-            <figcaption>
-              <span>01 / THE COURTYARD HOUSE</span>
-              <span>IKOYI · LAGOS, NIGERIA</span>
-            </figcaption>
-          </figure>
+
+            <figure className="hero-photo">
+              <img
+                src="/assets/courtyard.webp"
+                alt="A quiet limestone courtyard with a timber entry, leafy tree and reflecting pool"
+                width={1360}
+                height={680}
+                fetchPriority="high"
+              />
+              <figcaption>
+                <span>THE COURTYARD</span>
+                <span>ARCHITECTURAL ILLUSTRATION</span>
+              </figcaption>
+            </figure>
+          </div>
 
           {/* 01 / COLLECTION */}
           <section className="light section collection" id="properties">
@@ -1162,31 +1164,6 @@ export default function App() {
                     Nigerian commercial banks.
                   </p>
                 </details>
-              </div>
-            </div>
-          </section>
-
-          {/* 05 / WHO'S BEHIND MIRVAI */}
-          <section className="light section about" id="about">
-            <div className="section-inner editorial">
-              <div>
-                <p className="eyebrow">05 / WHO’S BEHIND MIRVAI</p>
-                <h2>
-                  Built on trust,
-                  <br />
-                  not shortcuts.
-                </h2>
-              </div>
-              <div>
-                <p>
-                  Osuwah Nkechi Racheal founded MIRVAI after seeing how hard it can be to buy property in Nigeria with
-                  confidence, especially from abroad. MIRVAI’s approach is to make the choices, costs and checks clear so
-                  buyers can make informed decisions.
-                </p>
-                <p className="founder">
-                  <strong>Osuwah Nkechi Racheal</strong>
-                  <span>Founder &amp; Principal Advisor, MIRVAI</span>
-                </p>
               </div>
             </div>
           </section>
@@ -2501,9 +2478,6 @@ export default function App() {
 
           <button className="menu-link" onClick={() => jumpTo('diaspora')}>
             Diaspora Desk
-          </button>
-          <button className="menu-link" onClick={() => jumpTo('about')}>
-            About MIRVAI
           </button>
           <button
             className="menu-link"

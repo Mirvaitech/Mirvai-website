@@ -303,3 +303,25 @@ textarea{resize:vertical;min-height:70px}
 }
 @media(max-width:345px){.review-note svg{display:none}.property-grid,.division-grid{grid-template-columns:minmax(0,1fr)}.modal .form-grid{grid-template-columns:minmax(0,1fr)}.team-metrics{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+
+/* Approved Courtyard hero: left-aligned title beside its architectural image. */
+.hero-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);align-items:center;gap:clamp(.75rem,2.8vw,2.55rem);padding:clamp(1.55rem,4.1vw,3.8rem) clamp(1.2rem,5.5vw,5rem) clamp(1.5rem,4.5vw,3.85rem);background:var(--espresso)}
+.hero-layout .hero{text-align:left;padding:.8rem 0;min-width:0}
+.hero-layout .hero-location{justify-content:flex-start;flex-wrap:wrap;gap:.72rem}
+.hero-layout .hero-location::after{display:none}
+.hero-layout .hero h1{margin:.76rem 0 1.12rem;font-size:clamp(2.53rem,6.45vw,6.45rem)}
+.hero-layout .hero h1 em{display:inline-block;padding-inline-start:.37em}
+.hero-layout .hero-copy{max-width:32ch;margin:0 0 1.45rem;font-size:clamp(.95rem,1.6vw,1.22rem)}
+.hero-layout .hero-photo{position:relative;margin:.38rem .45rem 0 .12rem;background:transparent}
+.hero-layout .hero-photo::after{content:"";position:absolute;inset:-.45rem -.45rem 1.2rem .45rem;border-top:1px solid var(--gold);border-right:1px solid var(--gold);opacity:.67;pointer-events:none}
+.hero-layout .hero-photo img{width:100%;height:auto;aspect-ratio:1.06/1;max-height:620px;object-position:53% 54%}
+.hero-layout .hero-photo figcaption{position:static;display:flex;justify-content:space-between;gap:.42rem;padding:.6rem 0 0;background:none;color:var(--muted);font-size:.64rem;font-weight:500;letter-spacing:.13em}
+@media(max-width:650px){
+ .hero-layout{grid-template-columns:minmax(0,1fr);gap:1.22rem;padding:1.55rem 1.1rem 1.4rem}
+ .hero-layout .hero{padding:.25rem 0 0}
+ .hero-layout .hero h1{font-size:clamp(2.82rem,11vw,3.95rem)}
+ .hero-layout .hero-photo{margin-inline-start:clamp(.66rem,5vw,1.55rem)}
+ .hero-layout .hero-photo img{aspect-ratio:4/3}
+ .hero-layout .hero-photo figcaption{font-size:.55rem;letter-spacing:.11em}
+}
