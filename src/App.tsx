@@ -738,6 +738,28 @@ export default function App() {
 
   return (
     <>
+      {route === 'website' && (
+        <a
+        href={`https://wa.me/${(cms.whatsappPhone || defaultCMS.whatsappPhone).replace(/\D/g, "")}?text=${encodeURIComponent("Hello MIRVAI, I would like to enquire about a property.")}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat with MIRVAI on WhatsApp"
+        style={{
+          position: "fixed", left: 20, bottom: "max(20px, env(safe-area-inset-bottom))",
+          zIndex: 60, display: "inline-flex", alignItems: "center", gap: 9,
+          padding: "12px 17px", borderRadius: 999, background: "#128C4A",
+          color: "#fff", fontSize: 14, fontWeight: 700, textDecoration: "none",
+          boxShadow: "0 8px 26px rgba(0,0,0,0.28)",
+        }}
+      >
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 21l2.1-5.4A8.5 8.5 0 1 1 21 11.5Z" />
+          <path d="M8.5 8.2c.2 3.6 3.2 6.6 6.8 6.8l1.3-1.3-2.2-1.1-.9 1a7.4 7.4 0 0 1-3.1-3.1l1-.9-1.1-2.2-1.8.8Z" />
+        </svg>
+        <span>WhatsApp</span>
+      </a>
+      )}
+
       {/* SVG Symbols */}
       <svg className="symbols" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
         <symbol id="i-menu" viewBox="0 0 24 24">
